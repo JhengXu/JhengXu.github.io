@@ -37,9 +37,6 @@ next-env.d.ts
 /outputs/
 /work/
 
-# local hosting metadata
-/.openai/
-
 # original demo exports (web-compatible versions are committed)
 /public/videos/edubuddy.mp4
 /public/videos/mindcare-ai.mp4
