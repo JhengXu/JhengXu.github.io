@@ -846,6 +846,29 @@ blockquote {
   letter-spacing: 0.04em;
 }
 
+.authorEngagement .engagementPanel {
+  min-height: 0;
+  margin: 0;
+  padding: 7px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  border-radius: 9px;
+}
+
+.authorEngagement .engagementStat,
+.authorEngagement .likeButton {
+  width: 100%;
+  min-height: 29px;
+  padding: 0 6px;
+  justify-content: flex-start;
+}
+
+.authorEngagement .engagementDivider,
+.authorEngagement .engagementPrivacy {
+  display: none;
+}
+
 .pageFooter {
   margin-top: 30px;
   padding-top: 18px;
@@ -941,6 +964,24 @@ blockquote {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px 14px;
+  }
+
+  .authorEngagement .engagementPanel {
+    width: max-content;
+    max-width: 100%;
+    padding: 5px 8px;
+    display: flex;
+    gap: 6px;
+  }
+
+  .authorEngagement .engagementStat,
+  .authorEngagement .likeButton {
+    width: auto;
+  }
+
+  .authorEngagement .engagementDivider {
+    display: block;
+    height: 20px;
   }
 
   .mainContent {

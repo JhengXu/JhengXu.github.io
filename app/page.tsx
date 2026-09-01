@@ -368,6 +368,9 @@ export default function Home() {
                   en="Evolutionary games on complex networks · World models · AI for education"
                 />
               </li>
+              <li className="authorEngagement">
+                <Engagement />
+              </li>
               <li className="authorLinks">
                 <span className="authorLinksLabel"><Localized zh="个人主页" en="Profiles" /></span>
                 <div>
@@ -567,8 +570,6 @@ export default function Home() {
               jianhuaxu0410@gmail.com
             </a>
           </section>
-
-          <Engagement />
 
           <footer className="pageFooter">
             <p>© 2026 徐建华 · Jianhua Xu</p>

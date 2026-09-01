@@ -86,7 +86,7 @@ export default function Engagement() {
   };
 
   return (
-    <aside className="engagementPanel" aria-label="页面互动数据 / Page engagement">
+    <div className="engagementPanel" role="group" aria-label="页面互动数据 / Page engagement">
       <div className="engagementStat" title="匿名统计的页面访问次数 / Anonymous page views">
         <span className="engagementIcon" aria-hidden="true">◉</span>
         <span className="engagementValue">{formatCount(views)}</span>
@@ -112,6 +112,6 @@ export default function Engagement() {
       <span className="engagementPrivacy">
         <LocalizedLabel zh="匿名统计" en="anonymous counts" />
       </span>
-    </aside>
+    </div>
   );
 }
