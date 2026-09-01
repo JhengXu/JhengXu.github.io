@@ -238,6 +238,7 @@ const hackathons = [
     summaryEn:
       'Combines rainfall, tide, river-network, soil, and typhoon drivers in an auditable conservative graph state-space model for urban multi-hazard forecasting and scenario simulation.',
     href: 'https://github.com/JhengXu/cityos-flood',
+    image: '/cityos-flood-demo.jpg',
   },
 ];
 
@@ -524,6 +525,16 @@ export default function Home() {
                         您的浏览器暂不支持嵌入式视频播放。 / Your browser does not
                         support embedded video playback.
                       </video>
+                    ) : null}
+                    {item.image ? (
+                      <Image
+                        className="hackathonImage"
+                        src={item.image}
+                        width={2212}
+                        height={1280}
+                        sizes="(max-width: 760px) 100vw, 760px"
+                        alt={`${item.title} 演示界面 / ${item.titleEn} demo interface`}
+                      />
                     ) : null}
                     <a
                       className="hackathonResource"
