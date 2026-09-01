@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-const API_ROOT = 'https://counterapi.com/api/jhengxu.github.io';
-const VIEW_SESSION_KEY = 'jianhua-home-view-recorded';
-const LIKE_STORAGE_KEY = 'jianhua-home-liked';
+const API_ROOT = 'https://abacus.jasoncameron.dev';
+const COUNTER_NAMESPACE = 'jhengxu-github-io';
+const VIEW_SESSION_KEY = 'jianhua-home-view-recorded-v2';
+const LIKE_STORAGE_KEY = 'jianhua-home-liked-v2';
 
 type CounterResponse = {
   value?: number;
@@ -22,10 +23,11 @@ function LocalizedLabel({ zh, en }: { zh: string; en: string }) {
 async function readCounter(action: 'view' | 'like', increment: boolean) {
   const controller = new AbortController();
   const timeout = window.setTimeout(() => controller.abort(), 7000);
-  const query = increment ? 'noFormatting=true' : 'readOnly=true&noFormatting=true';
+  const operation = increment ? 'hit' : 'get';
+  const key = action === 'view' ? 'homepage-views' : 'homepage-likes';
 
   try {
-    const response = await fetch(`${API_ROOT}/${action}/homepage?${query}`, {
+    const response = await fetch(`${API_ROOT}/${operation}/${COUNTER_NAMESPACE}/${key}`, {
       cache: 'no-store',
       signal: controller.signal,
     });
