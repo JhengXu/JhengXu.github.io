@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { ReactNode } from 'react';
+import Engagement from './engagement';
 import SiteControls from './site-controls';
 
 function Localized({ zh, en }: { zh: ReactNode; en: ReactNode }) {
@@ -566,6 +567,8 @@ export default function Home() {
               jianhuaxu0410@gmail.com
             </a>
           </section>
+
+          <Engagement />
 
           <footer className="pageFooter">
             <p>© 2026 徐建华 · Jianhua Xu</p>

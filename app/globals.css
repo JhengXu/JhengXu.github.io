@@ -758,6 +758,94 @@ blockquote {
   font-size: 14px;
 }
 
+.engagementPanel {
+  min-height: 58px;
+  margin-top: 4px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-hover);
+  color: var(--muted);
+  font-family: var(--sans);
+}
+
+.engagementStat,
+.likeButton {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.likeButton {
+  padding: 0 9px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.likeButton:hover:not(:disabled),
+.likeButton:focus-visible {
+  color: var(--accent);
+  background: var(--surface);
+  transform: translateY(-1px);
+}
+
+.likeButton:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.likeButton:disabled {
+  cursor: default;
+}
+
+.likeButton.isLiked {
+  color: var(--accent);
+  background: var(--surface);
+}
+
+.engagementIcon {
+  color: var(--link);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.heartIcon {
+  color: var(--accent);
+}
+
+.engagementValue {
+  min-width: 1ch;
+  color: var(--heading);
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.engagementLabel {
+  font-size: 12px;
+}
+
+.engagementDivider {
+  width: 1px;
+  height: 24px;
+  background: var(--note-border);
+}
+
+.engagementPrivacy {
+  margin-left: auto;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
 .pageFooter {
   margin-top: 30px;
   padding-top: 18px;
@@ -997,6 +1085,14 @@ blockquote {
   .pageFooter {
     flex-direction: column;
     gap: 6px;
+  }
+
+  .engagementPanel {
+    gap: 8px;
+  }
+
+  .engagementPrivacy {
+    display: none;
   }
 }
 
