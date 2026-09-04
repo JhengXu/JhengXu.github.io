@@ -229,7 +229,7 @@ const hackathons = [
     video: '/videos/peppersight-web.mp4',
   },
   {
-    award: '爱化身 City OS 产品型 CEO 挑战赛前二',
+    award: '爱化身 City OS 产品型 CEO 挑战赛冠军',
     awardEn: 'Top 2 · iAvatar City OS Product CEO Challenge',
     title: 'CityOS Flood · 深圳城市多灾种预测与情景推演',
     titleEn: 'CityOS Flood · Shenzhen Multi-Hazard Forecasting and Scenario Simulation',
