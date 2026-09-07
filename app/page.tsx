@@ -230,7 +230,7 @@ const hackathons = [
   },
   {
     award: '爱化身 City OS 产品型 CEO 挑战赛冠军',
-    awardEn: 'Top 2 · iAvatar City OS Product CEO Challenge',
+    awardEn: 'Top 1 · iAvatar City OS Product CEO Challenge',
     title: 'CityOS Flood · 深圳城市多灾种预测与情景推演',
     titleEn: 'CityOS Flood · Shenzhen Multi-Hazard Forecasting and Scenario Simulation',
     summary:
@@ -411,8 +411,8 @@ export default function Home() {
             <h2><Localized zh="关于我" en="About Me" /></h2>
             <p>
               <Localized
-                zh="我是徐建华，现为北京大学数学科学学院 26 级大数据专业硕士研究生。"
-                en="I am Jianhua Xu, a Class of 2026 master's student in the Big Data program at the School of Mathematical Sciences, Peking University."
+                zh="我是徐建华，现为北京大学数学科学学院 26 级大数据专业硕士研究生，师从杨超教授"
+                en="I am Jianhua Xu, a Class of 2026 master's student in the Big Data program at the School of Mathematical Sciences, Peking University，advised by Professor Chao Yang."
               />
             </p>
             <p>
