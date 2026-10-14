@@ -22,6 +22,8 @@ type ResearchItem = {
   title: string;
   summary: string;
   summaryEn: string;
+  feedback?: string;
+  feedbackEn?: string;
   href: string;
 };
 
@@ -62,6 +64,8 @@ const research: ResearchItem[] = [
     summary: '围绕旅行规划中的欺诈检测，探索大模型多智能体的真实世界规划可靠性。',
     summaryEn:
       'Evaluated the real-world planning reliability of LLM-based multi-agent systems through fraud detection in travel planning.',
+    feedback: '研究获所评测开源旅行规划框架作者 Arjun Prabhulal（Google Developer Expert）主动致信关注与致谢。',
+    feedbackEn: 'Arjun Prabhulal (Google Developer Expert), author of the open-source travel-planning framework evaluated in this study, reached out by email to express interest and thanks.',
     href: 'https://arxiv.org/abs/2505.16557',
   },
   {
@@ -488,6 +492,12 @@ export default function Home() {
                       · {item.period}
                     </p>
                     <p><Localized zh={item.summary} en={item.summaryEn} /></p>
+                    {item.feedback && (
+                      <p>
+                        <strong><Localized zh="外部反馈：" en="External feedback: " /></strong>
+                        <Localized zh={item.feedback} en={item.feedbackEn ?? item.feedback} />
+                      </p>
+                    )}
                   </div>
                 </article>
               ))}
