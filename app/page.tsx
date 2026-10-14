@@ -494,7 +494,6 @@ export default function Home() {
                     <p><Localized zh={item.summary} en={item.summaryEn} /></p>
                     {item.feedback && (
                       <p>
-                        <strong><Localized zh="外部反馈：" en="External feedback: " /></strong>
                         <Localized zh={item.feedback} en={item.feedbackEn ?? item.feedback} />
                       </p>
                     )}
